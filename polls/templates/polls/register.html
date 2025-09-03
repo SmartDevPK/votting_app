@@ -8,12 +8,11 @@
 <body>
     <h2>Create Account</h2>
 
-    <form method="POST">
-        {% csrf_token %}
-        {{ form.as_p }}
-        <button type="submit">Register</button>
-    </form>
+<form method="post">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <button type="submit">Register</button>
+</form>
 
-    <p>Already have an account? <a href="/polls/templates/polls/login.html">Login here</a></p>
-</body>
+    <p>Already have an account? <a href="{% url 'login' %}">Login here</a></p>
 </html>
